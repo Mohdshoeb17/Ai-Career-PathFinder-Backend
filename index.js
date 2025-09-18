@@ -8,8 +8,9 @@ const Authroute = require('./Routes/AuthRoute');
     db() 
     const app = express();
     app.use(cors()); 
+    const PORT=process.env.PORT
     app.use(express.json()); 
     app.use('/auth',Airoute)
     app.use('/auth',Authroute)
- app.listen(8000, () => console.log(" Server running on 8000"))
+ app.listen(PORT, () => console.log(` Server running on ${PORT}` ))
   
